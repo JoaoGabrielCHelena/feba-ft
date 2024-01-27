@@ -1,4 +1,44 @@
-// the grid-column 1 us neant to be overwritten by a grid-start value
+.flexColumn
+    display: flex
+    flex-direction: column
+
+.flexRow
+    display: flex
+    flex-direction: row
+    
+.paragraphLH
+    line-height: 160%
+
+.subgrid
+    display: grid
+    grid-template-columns: subgrid
+
+.width100
+    width: 100%
+    
+
+.relative
+    position: relative
+
+.maxContent
+    width: max-content
+
+.bdrs
+    border-radius: 4px
+
+
+.btnPadding
+    padding: 14px
+
+.btnHalfPadding
+    padding: 7px
+
+.txtCenter
+    text-align: center
+
+.textUppercase
+    text-transform: uppercase
+    
 $breakpoints: 1px 768px "S" 4 25px, 769px 1024px "M" 10 80px, 1025px 9999px "ML" 12 135px
 $font-weights: 300 "thin" , 400 "normal", 600 "demibold", 800 "bold"
 $font-sizes: 80, 36, 32, 28, 18, 16, 14, 12, 48
@@ -11,6 +51,7 @@ $font-sizes: 80, 36, 32, 28, 18, 16, 14, 12, 48
                 font-size: #{$size}px
 
         @for $i from 1 through 12  
+            // the grid-column 1 us meant to be overwritten by a grid-start value
             .span#{$i}#{$name}
                 grid-column: 1 / span #{$i}
 
@@ -64,22 +105,10 @@ $font-sizes: 80, 36, 32, 28, 18, 16, 14, 12, 48
     @media screen and ( min-width: $min ) and ( max-width: $max )
         .spanRow#{$name}
             grid-column: span $cols
-    
-.flexColumn
-    display: flex
-    flex-direction: column
-
-.flexRow
-    display: flex
-    flex-direction: row
 
 @each $fw, $name in $font-weights
     .#{$name}FW
         font-weight: $fw
-        
-
-
-
 
 // these "gray-" and "primary-" names are the on the figma file
 // kept them for the sake of simplicity
@@ -114,55 +143,26 @@ $util-colors: $white, $black, $transparent-black, $gray-500, $gray-400, $primary
     .border#{$name}
         border: 2px solid $color
 
-.btnPadding
-    padding: 14px
-
-.btnHalfPadding
-    padding: 7px
-
-.txtCenter
-    text-align: center
-
-.textUppercase
-    text-transform: uppercase
 
 $displays: "none" "N", "block" "B" ,"inline-block" "IN", "flex" "F", "grid" "G"
 @each $value, $name in $displays
      .d#{$name}
         display: #{$value}
 
-.relative
-    position: relative
-
-.maxContent
-    width: max-content
-
-.bdrs
-    border-radius: 4px
 
 @for $multiplier from 1 through 6
     .mt#{$multiplier}
-        margin-top: calc( .5rem * $multiplier ) 
+        margin-top: calc( 8px * $multiplier ) 
     
     // margin top large
     .mtL#{$multiplier}
         margin-top: calc( 30px * $multiplier ) 
     
     .p#{$multiplier}
-            padding: calc( 8px * $multiplier )
+        padding: calc( 8px * $multiplier )
 
     .ptL#{$multiplier}
         padding-top: calc( 30px * $multiplier )
 
     .pbL#{$multiplier}
         padding-bottom: calc( 30px * $multiplier )
-     
-.paragraphLH
-    line-height: 160%
-
-.subgrid
-    display: grid
-    grid-template-columns: subgrid
-
-.width100
-    width: 100%

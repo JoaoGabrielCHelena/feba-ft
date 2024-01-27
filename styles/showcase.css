@@ -110,7 +110,6 @@
   width: auto;
 }
 .showcaseGrid a {
-  margin-top: 30px;
   overflow: hidden;
   position: relative;
   border-radius: 4px;
@@ -201,6 +200,9 @@
   top: 3px;
 }
 
+.normalCard {
+  max-height: 280px;
+}
 .normalCard p {
   position: absolute;
   bottom: 30px;

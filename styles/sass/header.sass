@@ -2,6 +2,7 @@ header
     position: relative
     padding: 20px 0
     @media screen and ( min-width:1024px )
+        // deals with the subgrid
         .inGrid
             place-items: center
             height: 100%
@@ -12,6 +13,8 @@ header
     display: flex
     justify-content: space-between
     height: min-content
+
+// handling mobile
 @media screen and ( max-width:1024px )
     .mobileMenu
         display: none
@@ -39,7 +42,7 @@ header
             padding: 25px
             width: 100%
     nav
-        [data-expanded]
+        [data-expanded] //select the hamburger
             border: none
             background: transparent
             grid-column: 1

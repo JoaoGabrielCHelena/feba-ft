@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Header from "@/components/header";
 import Banner from "@/sections/banner";
 import QuemSomos from "@/sections/quemsomos";
-import Contatenos from "@/sections/contatenos";
+import Contatenos from "@/sections/sectionForm";
 import Showcase from "@/sections/showcase";
 import Footer from "@/components/footer";
 

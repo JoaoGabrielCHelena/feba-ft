@@ -9,6 +9,8 @@
     border: 2px black solid
     border-radius: 4px
     margin-top: 16px
+
+    // stylings for the invalid message and valid tick
     & ~ p
         display: none
         position: absolute 
@@ -24,6 +26,7 @@
         height: 12px
         width: auto
 
+// only checks for valid or invalide once placeholder is not being shown (has text)
 .commonInput:not(:placeholder-shown)
     &:valid
         border-color: #1AA584
@@ -42,11 +45,14 @@
     font-size: 14px
     color: black
     border: none
+    // stuff moves the label when has text
     &:not(:placeholder-shown)
         & + label
             padding-top: 6px
             font-size: 12px
             color: #A0A0A0
+    
+    // stuff moves the label when selected
     &:focus-within
         border: none
         outline: none
@@ -65,6 +71,7 @@ label
     cursor: text
     font-size: 14px
     vertical-align: center
+    transition: 300ms
 
 ::placeholder
     font-size: 14px
@@ -81,6 +88,7 @@ textarea
     font-family: inherit
     resize: none
 
+// the success box stylings, appears after a success in the form
 .success
     position: absolute
     top: 0
@@ -115,7 +123,6 @@ fieldset
     &:hover
         cursor: pointer
         
-
 [data-success="processing"] [type="submit"]
     pointer-events: none
 
@@ -128,6 +135,7 @@ fieldset
         pointer-events: none
         background-color: #76C9B5
 
+// background image and chaging the position of consultores for mobile
 .formSection
     background-image: url("../public/images/formBackground.jpeg")
     background-position-x: 835px
@@ -141,6 +149,15 @@ fieldset
             left: 50%
             transform: translateX(-50%)
             bottom: 50px
-        
-.consultores p
-    margin-bottom: 8px
+
+.consultores 
+    // overlap  
+    img
+        &:nth-child(3)
+            translate: -25% 0
+            z-index: 1
+        &:nth-child(4)
+            translate: -50% 0
+            z-index: 2
+    p
+        margin-bottom: 8px

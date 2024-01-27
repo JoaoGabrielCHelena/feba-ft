@@ -17,7 +17,7 @@ export default function MainPageForm() {
     // simulates a form, returning positive after a second 
 
       
-    
+    // handles the formating of the phone number
     const update:any = (event:Event) => {
         let input = event.target as HTMLInputElement
         input.value = format(input.value)
@@ -49,7 +49,7 @@ export default function MainPageForm() {
                         <label htmlFor="name">Nome</label>
                     </div>
                     <div className={`${utils.relative}`}>
-                        <input className={`commonInput ${utils.width100}`} placeholder={"Telefone"} onChange={update} required name="telephone" min={14} maxLength={15} id="telephone" type="tel" />
+                        <input className={`commonInput ${utils.width100}`} placeholder={"Telefone"} onChange={update} required name="telephone" minLength={14} maxLength={15} id="telephone" type="tel" />
                         <img src="/icons/tick.svg" alt="" />
                         <p>*por favor, preencher corretamente</p>
                     </div>

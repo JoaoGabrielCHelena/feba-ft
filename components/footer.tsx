@@ -5,11 +5,12 @@ import utils from "@/styles/utils.module.css"
 import { navLinks } from "./header"
 import "@/styles/footer.css"
 import { SocialCircles, WhatsappButton } from "./buttons"
-// ^ the links and funcare an object in the header.tsx
+// ^ the links and func are an from the header.tsx
 // V although it is the same function as the one in header.tsx, these will have different stylings
 function generateLinks(input:linkList) {
     return input.map((value:{name:string, path:string}) => <Link className={`${utils.sz12} ${utils.mt2} ${utils.colorW}`} href={value.path}>{value.name}</Link>)
 }
+
 type linkList = {name:string, path:string}[]
 
 export default function Footer(){
