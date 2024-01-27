@@ -1,28 +1,25 @@
-.contactInfo {
-  align-items: flex-end;
+@media screen and (max-width: 768pxpx) {
+  .contactInfo {
+    align-items: flex-end;
+  }
+  .contactInfo p {
+    text-align: right;
+  }
 }
-.contactInfo p {
-  text-align: right;
-}
-.contactInfo .whatsapp {
+footer .whatsapp {
   margin-top: 16px;
+  width: max-content;
 }
 
 .febaRow div {
-  display: flex;
   justify-content: space-between;
   padding: 22px 0;
   color: #6F6F6F;
   border-top: 1px solid #1C1C1C;
 }
-@media screen and (min-width: 1px) and (max-width: 480px) {
+@media screen and (min-width: 1px) and (max-width: 768px) {
   .febaRow {
     padding: 0 25px;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .febaRow {
-    padding: 0 50px;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {

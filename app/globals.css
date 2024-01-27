@@ -9,6 +9,7 @@ body {
   overflow-x: hidden;
 }
 
-a {
+a, button {
   text-decoration: none;
+  transition: 300ms;
 }/*# sourceMappingURL=globals.css.map */

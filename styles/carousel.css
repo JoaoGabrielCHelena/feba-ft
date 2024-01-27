@@ -1,0 +1,77 @@
+.section {
+  width: 100%;
+  height: max-content;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 750px;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .imageWrapper {
+    height: 425px;
+  }
+}
+.imageWrapper img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  transition: opacity 800ms;
+  object-fit: cover;
+}
+
+.controlTextWrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.controlTextWrapper div {
+  align-self: center;
+}
+
+.BtnR, .BtnL {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: hsla(0, 0%, 0%, 0.4);
+  border: none;
+  padding: 34px;
+}
+.BtnR:hover, .BtnL:hover {
+  cursor: pointer;
+  background: #000;
+}
+@media screen and (max-width: 1024px) {
+  .BtnR, .BtnL {
+    top: unset;
+    transform: none;
+    bottom: 0;
+    padding: 20px;
+  }
+}
+
+.BtnR {
+  right: 0;
+}
+@media screen and (max-width: 1024px) {
+  .BtnR {
+    right: unset;
+    left: 96px;
+  }
+}
+
+.BtnL {
+  left: 0;
+}
+@media screen and (max-width: 1024px) {
+  .BtnL {
+    left: 25px;
+  }
+}
+.BtnL img {
+  transform-origin: center;
+  rotate: 180deg;
+}/*# sourceMappingURL=carousel.css.map */

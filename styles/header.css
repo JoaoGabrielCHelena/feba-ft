@@ -53,6 +53,9 @@ header {
     grid-column: 1;
     grid-column-start: -1;
   }
+  nav [data-expanded]:hover {
+    cursor: pointer;
+  }
   nav [data-expanded="1"] + .mobileMenu {
     display: block;
   }

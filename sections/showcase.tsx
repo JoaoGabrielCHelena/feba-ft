@@ -29,7 +29,7 @@ export default function Showcase() {
 
     return (
         <>
-            <section className={`${utils.standardisedGrid} ${utils.mtL4}`}>
+            <section className={`${utils.standardisedGrid} ${utils.mtL4ML} ${utils.mtL4M} ${utils.mtL2S}`}>
                <div className={`${utils.spanRow} filterRow`}>    
                     <h2 className={`${utils.sz48ML} ${utils.sz36M} ${utils.normalFW} ${utils.rowSpan2S}`}>
                         Confira todos os 
@@ -41,8 +41,8 @@ export default function Showcase() {
                 <div className={`${utils.gridRows3ML} ${utils.gridRows2M} ${utils.gridRows4S} ${utils.spanRow} showcaseGrid`}>
                     <a href="#" className={`majorCard ${utils.span6ML} ${utils.span6M} ${utils.rowSpan2ML} ${utils.rowSpan2M} ${utils.spanRowS}`}>
                         <Image src={majorCard.src} height={450} width={450} alt="" />
-                        <p className="alwaysVisible">
-                            <span>Pré Lançamento</span>
+                        <p className={`alwaysVisible ${utils.sz18ML} ${utils.sz18M} ${utils.sz16S}`}>
+                            <span className={`${utils.sz12}`}>Pré Lançamento</span>
                             {majorCard.name}
                         </p>
                         <div className="row">
@@ -62,15 +62,15 @@ export default function Showcase() {
                     {/* V generates the normal cards  */}
                     {
                         normalCards.map((value) => (
-                            <a href="#" className={`normalCard ${utils.absoluteSpan3ML} ${utils.absoluteSpan2M} ${utils.spanRowS}`}>
-                                <Image src={value.src} width={350} height={350} alt="" />
+                            <a href="#" className={`normalCard ${utils.sz14ML} ${utils.sz14M} ${utils.sz16S} ${utils.absoluteSpan3ML} ${utils.absoluteSpan2M} ${utils.spanRowS}`}>
+                                <Image src={value.src} width={450} height={450} alt="" />
                                 <p>{value.name}</p>
                             </a>                        
                         ))
                     }
-                    <button className={`${utils.mtL3} load`}>Carregar Mais</button>
                     {/* ^ it don ✨werk✨ */}
                 </div>
+                <button className={`${utils.spanRow} load`}>Carregar Mais</button>
             </section>
         </>                
     )

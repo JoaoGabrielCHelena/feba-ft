@@ -29,6 +29,9 @@ $font-sizes: 80, 36, 32, 28, 18, 16, 14, 12, 48
         @for $i from 1 through 6
             .mt#{$i}#{$name}
                 margin-top: calc( .5rem * $i ) !important
+        @for $i from 1 through 6
+            .mtL#{$i}#{$name}
+                margin-top: calc( 30px * $i )
         .flexRow#{$name}
             display: flex
             flex-direction: row
