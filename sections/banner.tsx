@@ -1,6 +1,6 @@
 'use client'
 
-import styles from "@/styles/carousel.module.css"
+import "@/styles/carousel.css"
 import { useEffect, useState } from "react"
 import utils from "@/styles/utils.module.css"
 
@@ -56,13 +56,13 @@ export default function Banner() {
 
     return (
         <>
-        <section className={`${styles.section} ${utils.relative}`}>
+        <section className={`section ${utils.relative}`}>
             {/* houses everything over the images */}
-            <div className={`${utils.standardisedGrid} ${styles.controlTextWrapper}`}>
-                <button className={`${styles.BtnR}`} onClick={() => {changeHandler(-1)}}>
+            <div className={`${utils.standardisedGrid} controlTextWrapper`}>
+                <button className={`BtnR`} onClick={() => {changeHandler(-1)}}>
                     <img src="./icons/arrowR.svg" alt="" />
                 </button>
-                <button className={`${styles.BtnL}`} onClick={() => {changeHandler(1)}}>
+                <button className={`BtnL`} onClick={() => {changeHandler(1)}}>
                     <img src="./icons/arrowR.svg" alt="" />
                 </button>
                 <div className={`${utils.span5ML} ${utils.gridStart2ML} ${utils.span5M} ${utils.gridStart2M} ${utils.spanRowS} ${utils.colorW}`}>
@@ -82,7 +82,7 @@ export default function Banner() {
             </div>
 
             {/* houses the images */}
-            <div className={styles.imageWrapper}>
+            <div className={`imageWrapper`}>
                 {/* would've prefered to use <Image /> but it was being dumb and saying "Unable to optimize image and unable to fallback to upstream image" */}
                 <>
                     {carouselItems.map((value:{id:number, url:string}) => <img id={`${value.id}`} key={value.id} src={value.url} alt="" />)}

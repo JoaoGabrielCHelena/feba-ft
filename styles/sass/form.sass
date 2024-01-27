@@ -9,12 +9,32 @@
     border: 2px black solid
     border-radius: 4px
     margin-top: 16px
+    & ~ p
+        display: none
+        position: absolute 
+        bottom: -12px
+        left: 0px
+        font-size: 10px
+        color: #EB5757
+    & ~ img
+        display: none
+        position: absolute 
+        right: 16px
+        top: 35px
+        height: 12px
+        width: auto
 
 .commonInput:not(:placeholder-shown)
     &:valid
         border-color: #1AA584
+        color: #1AA584
+        & ~ img
+            display: block
     &:invalid
-        border-color: red
+        border-color: #EB5757
+        color: #EB5757
+        & ~ p
+            display: block
 
 
 .nameInput input
@@ -60,12 +80,32 @@ textarea
     margin: 16px 0
     font-family: inherit
     resize: none
+
+.success
+    position: absolute
+    top: 0
+    left: 0
+    display: grid
+    background: #F5F5F5
+    height: 100%
+    width: 100%
+    opacity: 0
+    place-items: center
+    padding: 45px
+    text-align: center
+    z-index: 1
+    border-radius: 4px
+    pointer-events: none
+    transition: 300ms 4s opacity
+    p:last-child
+        color: #6F6F6F
         
 
 
 form
     --inputPadding: #{9px}
     padding: 45px
+    position: relative
 
 fieldset
     border: none
@@ -74,12 +114,33 @@ fieldset
     border: none
     &:hover
         cursor: pointer
-        scale: 105%
         
 
 [data-success="processing"] [type="submit"]
     pointer-events: none
 
-[data-success="true"] [type="submit"]
-    pointer-events: none
-    background-color: #76C9B5
+[data-success="true"] 
+    .success
+        opacity: 1
+        pointer-events: initial
+
+    [type="submit"]
+        pointer-events: none
+        background-color: #76C9B5
+
+.formSection
+    background-image: url("../public/images/formBackground.jpeg")
+    background-position-x: 835px
+    background-repeat: no-repeat
+    background-size: contain
+    position: relative
+    @media screen and ( max-width: 768px )
+        padding-bottom: 170px
+        .consultores
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            bottom: 50px
+        
+.consultores p
+    margin-bottom: 8px

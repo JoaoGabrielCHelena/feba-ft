@@ -3,7 +3,7 @@ import utils from "@/styles/utils.module.css"
 export default function QuemSomos() {
     return (
         <>
-            <section className={`${utils.standardisedGrid} ${utils.mtL4}`}>
+            <section className={`${utils.standardisedGrid} ${utils.mtL4ML} ${utils.mtL4M} ${utils.mtL2}`}>
                 <img className={`${utils.span5ML} ${utils.span4M} ${utils.noneS} ${utils.width100}`} src="/images/quemsomos.png" height="auto" width="auto" alt="" />
                 <div className={`${utils.gridStart7ML} ${utils.span6ML} ${utils.gridStart5M} ${utils.span6M} ${utils.spanRowS} ${utils.mt2}`}>
                     <h2 className={`${utils.normalFW} ${utils.colorDB} ${utils.sz48ML} ${utils.sz32M} ${utils.sz28S}`}>
