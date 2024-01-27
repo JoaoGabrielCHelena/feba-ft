@@ -1,6 +1,8 @@
 header
     position: relative
     padding: 20px 0
+    box-shadow: 0px 1px 0px 0px #0000000D
+    z-index: 2
     @media screen and ( min-width:1024px )
         // deals with the subgrid
         .inGrid
@@ -23,7 +25,7 @@ header
         left: 0
         width: 100%
         height: max-content
-        z-index: 100
+        z-index: 1
         background: white
         .navLinks
             flex-direction: column
@@ -41,6 +43,9 @@ header
             background: #F2F2F2
             padding: 25px
             width: 100%
+            a
+                display: block
+                width: 100%
     nav
         [data-expanded] //select the hamburger
             border: none

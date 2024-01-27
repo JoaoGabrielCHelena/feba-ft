@@ -19,11 +19,11 @@ export default function Footer(){
             <div className={utils.standardisedGrid}>
                 <div className={`${utils.span3ML} ${utils.span2M} ${utils.span3S}`}>
                     <img src="/images/livaGrayscale.png" height={50} width="auto" alt="liva" />
-                    <p className={utils.sz12}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p className={`${utils.sz12} ${utils.mt3S}`}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     {/* yes, i am pedantic enough to copy the lorem ipsum */}
                 </div>
                 <nav className={`${utils.span2ML} ${utils.gridStart5ML} ${utils.flexColumnML} ${utils.span2M} ${utils.gridStart3M}
-                ${utils.flexColumnM} ${utils.flexColumnS} ${utils.textUppercase} ${utils.span3S}`}>
+                ${utils.flexColumnM} ${utils.flexColumnS} ${utils.textUppercase} ${utils.span3S} ${utils.mtL2S}`}>
                     <p className={`${utils.span3ML} ${utils.sz14} ${utils.demiboldFW} ${utils.colorG1}`}>Navegue no site</p>
                     <>
                         {generateLinks(navLinks)}
@@ -45,7 +45,7 @@ export default function Footer(){
                 </div>
             </div>
             <div className={`febaRow ${utils.mt3}`}>
-                <div className={`${utils.flexRowML} ${utils.flexRowM} ${utils.flexColumnS}`}>
+                <div className={`${utils.flexRow} ${utils.sz12}`}>
                     <p>Liva © 2022 Todos os direitos reservados.</p>
                     <img src="/icons/logoFeba.svg" alt="Feba Capital" />
                 </div>
