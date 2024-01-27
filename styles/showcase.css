@@ -200,8 +200,10 @@
   top: 3px;
 }
 
-.normalCard {
-  max-height: 280px;
+@media screen and (min-width: 769px) {
+  .normalCard {
+    max-height: 280px;
+  }
 }
 .normalCard p {
   position: absolute;
