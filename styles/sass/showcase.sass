@@ -1,11 +1,10 @@
 .filterRow
     @media screen and ( min-width: 769px )
+        // only has... *this* on not-mobile
         display: grid
         grid-template-columns: auto max-content
 
-        
-    
-
+    // styling the open filters button
     & > [data-expanded]
         justify-self: end
         place-self: end
@@ -26,23 +25,30 @@
             margin-right: 8px
         &:hover
             cursor: pointer
+    
     & > [data-expanded="1"]
         background: transparent
         color: black
         fill: black
-
+        
+// hides filters
 [data-expanded="0"]
     & + .filterBtn
         display: none
 
+// dropdown stylings
 .filterBtn
+    // ocuppies whole row
     grid-column: span 2
     @media screen and ( min-width: 769px )
+        // for when it swaps to horizontal
         gap: 30px
         margin-top: 48px
+
     div
         width: 100%
         position: relative
+    
     button
         display: inline-block
         width: 100%
@@ -64,6 +70,7 @@
             rotate: 180deg
         & + ul
             display: none
+        
     ul
         position: absolute
         display: block
@@ -71,7 +78,7 @@
         width: 100%
         z-index: 1
 
-
+    // dropdown items
     li
         background: #F2F2F2
         border-radius: 4px
@@ -87,6 +94,7 @@
     display: grid
     grid-template-columns: subgrid
     @media screen and ( min-width: 769px )
+        // gap on mobile breaks stuff
         gap: 30px
     overflow-y: hidden
     grid-auto-rows: 0
@@ -95,10 +103,10 @@
         width: auto
 
     a   
-        margin-top: 30px
         overflow: hidden
         position: relative
         border-radius: 4px
+        // its the transparent to black block that they have over them V
         &::after
             content: ""
             position: absolute
@@ -110,6 +118,7 @@
         &:hover
             cursor: pointer
 
+// majorCard stylings
 .majorCard
     color: white
     transition: 400ms
@@ -123,6 +132,7 @@
             bottom: 185px
         .row, .dorm, .sec
             opacity: 1
+
 .alwaysVisible
     position: absolute
     left: 42px
@@ -168,6 +178,7 @@
         left: -30px
         top: 3px
 
+// normal cards
 .normalCard
     p
         position: absolute
@@ -177,6 +188,7 @@
         color: white
         z-index: 1
 
+// load button
 .load
     border: 2px solid #A0A0A0
     border-radius: 4px

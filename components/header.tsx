@@ -7,7 +7,7 @@ import utils from "@/styles/utils.module.css"
 import "@/styles/header.css"
 
 type linkList = {name:string, path:string}[]
-// ^V are used in the footer
+// V is used in the footer
 export const navLinks:linkList = [
     {"name": "Home", "path": "/"},
     {"name": "Sobre a Liva", "path": "/sobre"},

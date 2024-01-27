@@ -39,7 +39,7 @@ export default function Showcase() {
                     <FilterDropdown />
                 </div>
                 <div className={`${utils.gridRows3ML} ${utils.gridRows2M} ${utils.gridRows4S} ${utils.spanRow} showcaseGrid`}>
-                    <a href="#" className={`majorCard ${utils.span6ML} ${utils.span6M} ${utils.rowSpan2ML} ${utils.rowSpan2M} ${utils.spanRowS}`}>
+                    <a href="#" className={`majorCard ${utils.span6ML} ${utils.span6M} ${utils.rowSpan2ML} ${utils.rowSpan2M} ${utils.spanRowS} ${utils.mtL1S}`}>
                         <Image src={majorCard.src} height={450} width={450} alt="" />
                         <p className={`alwaysVisible ${utils.sz18ML} ${utils.sz18M} ${utils.sz16S}`}>
                             <span className={`${utils.sz12}`}>Pré Lançamento</span>
@@ -62,7 +62,8 @@ export default function Showcase() {
                     {/* V generates the normal cards  */}
                     {
                         normalCards.map((value) => (
-                            <a href="#" className={`normalCard ${utils.sz14ML} ${utils.sz14M} ${utils.sz16S} ${utils.absoluteSpan3ML} ${utils.absoluteSpan2M} ${utils.spanRowS}`}>
+                            <a href="#" className={`normalCard ${utils.sz14ML} ${utils.sz14M} ${utils.sz16S} ${utils.absoluteSpan3ML} ${utils.absoluteSpan2M}
+                            ${utils.spanRowS} ${utils.mtL1S}`}>
                                 <Image src={value.src} width={450} height={450} alt="" />
                                 <p>{value.name}</p>
                             </a>                        

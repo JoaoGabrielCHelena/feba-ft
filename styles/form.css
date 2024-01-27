@@ -72,6 +72,7 @@ label {
   cursor: text;
   font-size: 14px;
   vertical-align: center;
+  transition: 300ms;
 }
 
 ::placeholder {
@@ -161,6 +162,14 @@ fieldset {
   }
 }
 
+.consultores img:nth-child(2) {
+  translate: -15% 0;
+  z-index: 1;
+}
+.consultores img:nth-child(3) {
+  translate: -30% 0;
+  z-index: 2;
+}
 .consultores p {
   margin-bottom: 8px;
 }/*# sourceMappingURL=form.css.map */

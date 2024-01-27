@@ -1,3 +1,4 @@
+// only on mobile it does not align to the left
 @media screen and ( max-width: 768pxpx )
     .contactInfo
         align-items: flex-end
@@ -7,8 +8,9 @@
 footer .whatsapp
     margin-top: 16px
     width: max-content
-$column-breakpoints: 1px 768px 25px, 769px 1024px 80px , 1025px 9999px 135px 
 
+// have to do that weird stuff with the div to have the border on top to not extend towards the edges
+$column-breakpoints: 1px 768px 25px, 769px 1024px 80px , 1025px 9999px 135px 
 .febaRow
     div
         justify-content: space-between
@@ -18,4 +20,3 @@ $column-breakpoints: 1px 768px 25px, 769px 1024px 80px , 1025px 9999px 135px
     @each $min, $max, $padding in $column-breakpoints
         @media screen and ( min-width: $min ) and ( max-width: $max )
             padding: 0 $padding
-

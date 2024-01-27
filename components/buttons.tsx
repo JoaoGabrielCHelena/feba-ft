@@ -34,7 +34,9 @@ export function FilterButton() {
 }
 
 export function FilterDropdown() {
-
+    // i used this approach... because...
+    // i probably shouldnt have, but if the data were to be fetched... eh...
+    // still very unnecessary for this
     const placeholderInfo = [
         {
             "name": "opção 1",
@@ -64,6 +66,7 @@ export function FilterDropdown() {
     function createListItems(input:{information:[]}, parentValue:string) {
         let info = input.information
         return info.map((element:{name:string}) => (
+            // its long, but its usable with a keyboard! (i probably would have done the same for every other button if i had the time and the braincells)
             <li 
             key={element.name}
             tabIndex={0} 
