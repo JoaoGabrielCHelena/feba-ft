@@ -1,0 +1,165 @@
+// the grid-column 1 us neant to be overwritten by a grid-start value
+$breakpoints: 1px 768px "S" 4 25px, 769px 1024px "M" 10 80px, 1025px 9999px "ML" 12 135px
+$font-weights: 300 "thin" , 400 "normal", 600 "demibold", 800 "bold"
+$font-sizes: 80, 36, 32, 28, 18, 16, 14, 12, 48
+
+    
+@each $min, $max, $name in $breakpoints
+    @media screen and ( min-width:$min ) and ( max-width:$max )
+        @each $size in $font-sizes
+            .sz#{$size}#{$name}
+                font-size: #{$size}px
+
+        @for $i from 1 through 12  
+            .span#{$i}#{$name}
+                grid-column: 1 / span #{$i}
+
+        @for $i from 1 through 12  
+            .gridStart#{$i}#{$name}
+                grid-column-start: #{$i}
+        @for $i from 1 through 12  
+            .absoluteSpan#{$i}#{$name}
+                grid-column: span #{$i}
+        @for $i from 1 through 2
+            .rowSpan#{$i}#{$name}
+                grid-row: span #{$i}
+        @for $i from 1 through 4
+            .gridRows#{$i}#{$name}
+                grid-template-rows: repeat(#{$i}, 1fr)
+        @for $i from 1 through 6
+            .mt#{$i}#{$name}
+                margin-top: calc( .5rem * $i ) !important
+        .flexRow#{$name}
+            display: flex
+            flex-direction: row
+        .flexColumn#{$name}
+            display: flex
+            flex-direction: column
+        .none#{$name}
+            display: none !important
+        .width100#{$name}
+            width: 100% !important
+
+.standardisedGrid
+    display: grid
+    @each $min, $max, $name, $cols, $padding in $breakpoints
+        @media screen and ( min-width: $min ) and ( max-width: $max )
+            grid-template-columns: repeat( #{$cols} , 1fr)
+            gap: 30px 
+            padding: 0 $padding
+
+@each $size in $font-sizes
+    .sz#{$size}
+        font-size: #{$size}px
+
+.spanRow
+    @each $min, $max, $name, $cols, $padding in $breakpoints
+        @media screen and ( min-width: $min ) and ( max-width: $max )
+            grid-column: span $cols
+
+@each $min, $max, $name, $cols, $padding in $breakpoints
+    @media screen and ( min-width: $min ) and ( max-width: $max )
+        .spanRow#{$name}
+            grid-column: span $cols
+    
+.flexColumn
+    display: flex
+    flex-direction: column
+
+.flexRow
+    display: flex
+    flex-direction: row
+
+@each $fw, $name in $font-weights
+    .#{$name}FW
+        font-weight: $fw
+        
+
+
+
+
+// these "gray-" and "primary-" names are the on the figma file
+// kept them for the sake of simplicity
+$white: #fff "W"
+$black: #000 "B"
+$transparent-black: #00000065 "TB"
+//green 1   V
+$gray-500: #1AA584 "G1" 
+$gray-400: #48B79D "G2"
+$primary-400: #DCF8B1 "G3"
+$gray-900: #03110D "DB"
+
+$gray1: #393939 "Gray1"
+
+$util-colors: $white, $black, $transparent-black, $gray-500, $gray-400, $primary-400, $gray-900, $gray1
+@each $color, $name in $util-colors
+    .hoverBg#{$name}:hover
+        background-color: $color
+        
+    .bg#{$name}
+        background-color: $color
+     
+    .hoverColor#{$name}:hover
+        color: $color
+    
+    .color#{$name}
+        color: $color
+
+    .fill#{$name}
+        fill: $color
+    
+    .border#{$name}
+        border: 2px solid $color
+
+.btnPadding
+    padding: 14px
+
+.btnHalfPadding
+    padding: 7px
+
+.txtCenter
+    text-align: center
+
+.textUppercase
+    text-transform: uppercase
+
+$displays: "none" "N", "block" "B" ,"inline-block" "IN", "flex" "F", "grid" "G"
+@each $value, $name in $displays
+     .d#{$name}
+        display: #{$value}
+
+.relative
+    position: relative
+
+.maxContent
+    width: max-content
+
+.bdrs
+    border-radius: 4px
+
+@for $multiplier from 1 through 6
+    .mt#{$multiplier}
+        margin-top: calc( .5rem * $multiplier ) 
+    
+    // margin top large
+    .mtL#{$multiplier}
+        margin-top: calc( 30px * $multiplier ) 
+    
+    .p#{$multiplier}
+            padding: calc( 8px * $multiplier )
+
+    .ptL#{$multiplier}
+        padding-top: calc( 30px * $multiplier )
+
+    .pbL#{$multiplier}
+        padding-bottom: calc( 30px * $multiplier )
+     
+.paragraphLH
+    line-height: 160%
+
+.subgrid
+    display: grid
+    grid-template-columns: subgrid
+
+.width100
+    width: 100%

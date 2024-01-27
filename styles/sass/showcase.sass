@@ -1,0 +1,179 @@
+.filterRow
+    @media screen and ( min-width: 769px )
+        display: grid
+        grid-template-columns: auto max-content
+
+        
+    
+
+    & > [data-expanded]
+        justify-self: end
+        place-self: end
+        width: 150px
+        height: min-content
+        margin-bottom: 10px
+        display: inline-block
+        background: #000
+        color: white
+        fill: white
+        border: 2px #000 solid
+        border-radius: 4px
+        padding: 14px 25px
+        font-size: 16px
+        text-transform: uppercase
+        svg
+            transform: translateY(2px)
+            margin-right: 8px
+        &:hover
+            cursor: pointer
+    & > [data-expanded="1"]
+        background: transparent
+        color: black
+        fill: black
+
+[data-expanded="0"]
+    & + .filterBtn
+        display: none
+
+.filterBtn
+    grid-column: span 2
+    @media screen and ( min-width: 769px )
+        gap: 30px
+        margin-top: 48px
+    div
+        width: 100%
+        position: relative
+    button
+        display: inline-block
+        width: 100%
+        background: transparent
+        border: 2px #000 solid
+        border-radius: 4px
+        padding: 14px 25px
+        text-align: left
+        &:hover
+            cursor: pointer
+        &::before
+            content: url(../public/icons/chevron.svg)
+            transition: 200ms
+            position: absolute
+            right: 25px
+
+    [data-expanded="0"]
+        &::before
+            rotate: 180deg
+        & + ul
+            display: none
+    ul
+        position: absolute
+        display: block
+        list-style-type: none
+        width: 100%
+        z-index: 1
+
+
+    li
+        background: #F2F2F2
+        border-radius: 4px
+        width: 100%
+        margin-top: 4px
+        padding: 14px
+        &:hover
+            background: #000
+            color: white
+            cursor: pointer
+
+.showcaseGrid
+    display: grid
+    grid-template-columns: subgrid
+    gap: 30px
+    overflow-y: hidden
+    grid-auto-rows: 0
+    img
+        height: 100%
+        width: auto
+    a
+        overflow: hidden
+        position: relative
+        border-radius: 4px
+        &:hover
+            cursor: pointer
+
+.majorCard
+    color: white
+    transition: 400ms
+    *
+        transition: 400ms
+    &:hover
+        img
+            filter: brightness(0.8)
+        .alwaysVisible
+            bottom: 185px
+        .row, .dorm, .sec
+            opacity: 1
+.alwaysVisible
+    position: absolute
+    left: 42px
+    bottom: 54px
+    text-transform: uppercase
+    span
+        display: block
+        padding: 14px
+        background: white
+        color: #000
+        border-radius: 4px
+        margin-bottom: 18px
+.row
+    position: absolute
+    bottom: 128px
+    left: 42px
+    font-weight: bold
+    display: flex
+    gap: 40px
+    opacity: 0
+    span
+        display: block
+        font-weight: normal
+
+.dorm, .sec
+    position: absolute
+    left: 76px
+    opacity: 0
+
+.dorm
+    bottom: 70px
+    &::before
+        content: url("../public/icons/bedroomIcon.svg")
+        position: absolute 
+        left: -30px
+        top: 3px
+
+.sec
+    bottom: 40px
+    &::before
+        content: url("../public/icons/videoSecurityIcon.svg")
+        position: absolute 
+        left: -30px
+        top: 3px
+
+.normalCard
+    p
+        position: absolute
+        bottom: 30px
+        left: 24px
+        text-transform: uppercase
+        color: white
+        font-size: 14px
+
+.load
+    border: 2px solid #A0A0A0
+    border-radius: 4px
+    color: #A0A0A0
+    background: transparent
+    text-transform: uppercase
+    padding: 14px
+    width: 200px
+    font-size: 16px
+    grid-column: span 99
+    margin-inline: auto 
+    

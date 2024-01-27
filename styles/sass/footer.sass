@@ -1,0 +1,19 @@
+.contactInfo
+    align-items: flex-end
+    p
+        text-align: right
+    .whatsapp
+        margin-top: 16px
+$column-breakpoints: 1px 480px 25px, 481px 768px 50px, 769px 1024px 80px , 1025px 9999px 135px 
+
+.febaRow
+    div
+        display: flex
+        justify-content: space-between
+        padding: 22px 0
+        color: #6F6F6F
+        border-top: 1px solid #1C1C1C
+    @each $min, $max, $padding in $column-breakpoints
+        @media screen and ( min-width: $min ) and ( max-width: $max )
+            padding: 0 $padding
+

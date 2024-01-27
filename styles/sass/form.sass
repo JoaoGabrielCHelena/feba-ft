@@ -1,0 +1,85 @@
+
+
+.nameInput, .commonInput
+    display: inline-block
+    position: relative
+    min-height: 48px
+    padding: var(--inputPadding) 12px 
+    background: transparent
+    border: 2px black solid
+    border-radius: 4px
+    margin-top: 16px
+
+.commonInput:not(:placeholder-shown)
+    &:valid
+        border-color: #1AA584
+    &:invalid
+        border-color: red
+
+
+.nameInput input
+    margin-top: 9px
+    font-size: 14px
+    color: black
+    border: none
+    &:not(:placeholder-shown)
+        & + label
+            padding-top: 6px
+            font-size: 12px
+            color: #A0A0A0
+    &:focus-within
+        border: none
+        outline: none
+        & + label
+                padding-top: 6px
+                font-size: 12px
+                color: #A0A0A0
+label
+    display: inline-block
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    padding: 14px 12px 
+    cursor: text
+    font-size: 14px
+    vertical-align: center
+
+::placeholder
+    font-size: 14px
+    color: black
+    opacity: 1
+    font-weight: 500
+
+textarea
+    padding: var(--inputPadding) 12px 
+    background: transparent
+    border: 2px black solid
+    border-radius: 4px
+    margin: 16px 0
+    font-family: inherit
+    resize: none
+        
+
+
+form
+    --inputPadding: #{9px}
+    padding: 45px
+
+fieldset
+    border: none
+
+[type="submit"]
+    border: none
+    &:hover
+        cursor: pointer
+        scale: 105%
+        
+
+[data-success="processing"] [type="submit"]
+    pointer-events: none
+
+[data-success="true"] [type="submit"]
+    pointer-events: none
+    background-color: #76C9B5

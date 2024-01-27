@@ -1,0 +1,59 @@
+header {
+  position: relative;
+  padding: 20px 0;
+}
+@media screen and (min-width: 1024px) {
+  header .inGrid {
+    place-items: center;
+    height: 100%;
+  }
+}
+
+.navLinks {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: min-content;
+}
+
+@media screen and (max-width: 1024px) {
+  .mobileMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    z-index: 100;
+    background: white;
+  }
+  .mobileMenu .navLinks {
+    flex-direction: column;
+    padding-left: 25px;
+  }
+  .mobileMenu .navLinks a {
+    margin-top: 28px;
+  }
+  .mobileMenu .navLinks + div {
+    padding-left: 25px;
+    margin-top: 30px;
+  }
+  .mobileMenu .navLinks + div p {
+    margin-bottom: 14px;
+  }
+  .mobileMenu > *:last-child {
+    margin-top: 120px;
+    background: #F2F2F2;
+    padding: 25px;
+    width: 100%;
+  }
+  nav [data-expanded] {
+    border: none;
+    background: transparent;
+    grid-column: 1;
+    grid-column-start: -1;
+  }
+  nav [data-expanded="1"] + .mobileMenu {
+    display: block;
+  }
+}/*# sourceMappingURL=header.css.map */
