@@ -54,6 +54,6 @@ existem outras classes simples que estão no topo de utils.module.sass
 
 
 # Rambling
-1 - não deveria ter gerado os maps   
-   
-2 - se o projeto fosse maior, a pasta de sections teria uma pasta para cada pagina
+1 - não deveria ter gerado os maps      
+2 - se o projeto fosse maior, a pasta de sections teria uma pasta para cada pagina   
+3 - o form só espera 5 segundos e retorna sucesso
